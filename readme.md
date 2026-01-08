@@ -34,3 +34,28 @@ pip3 install -r requirements.txt --break-system-packages
 
 # Jalankan
 sudo python3 main.py
+
+
+
+### 2. 🦅 Arch Linux (BlackArch)
+Bash
+
+sudo pacman -S git python-pip
+git clone [https://github.com/kOdopoiii/NetChoke.git](https://github.com/kOdopoiii/NetChoke.git)
+cd NetChoke
+pip install -r requirements.txt
+sudo python main.py
+
+
+
+### 3. 📱 Termux (Android - Rooted)
+
+Catatan: Memerlukan akses ROOT untuk memanipulasi paket ARP.
+Bash
+
+pkg install git python nmap -y
+git clone [https://github.com/kOdopoiii/NetChoke.git](https://github.com/kOdopoiii/NetChoke.git)
+cd NetChoke
+pip install -r requirements.txt
+sudo python main.py
+
