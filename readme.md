@@ -1,19 +1,36 @@
 # ⚡ NetChoke
-**Network Traffic Control & Selective ARP Spoofing Tool.**
+> **Network Traffic Controller & Selective ARP Spoofing Tool.**
 
-NetChoke adalah alat penelitian keamanan jaringan yang dirancang untuk mensimulasikan gangguan jaringan (Latency/Lag) dan pemutusan koneksi (DoS) secara selektif pada jaringan lokal.
+NetChoke adalah alat audit keamanan jaringan yang dikembangkan dengan Python dan Scapy. Alat ini memungkinkan administrator jaringan untuk mensimulasikan gangguan jaringan (latency) atau pemutusan koneksi secara selektif pada perangkat di jaringan lokal (LAN).
 
-## ✨ Fitur
-- **Auto-Discovery**: Deteksi Gateway dan Interface secara otomatis.
-- **Selective Targeting**: Pilih target spesifik berdasarkan IP/MAC.
-- **Dual Mode**: 
-  - `LAG Mode`: Mensimulasikan high-latency (ping spike).
-  - `DC Mode`: Memutuskan koneksi target sepenuhnya.
-- **Stealth UI**: Tampilan terminal yang bersih dan profesional.
+---
 
-## 🚀 Cara Instalasi
+## ✨ Fitur Utama
+- **🔍 Auto-Discovery**: Deteksi otomatis Gateway, Interface, dan Subnet.
+- **🎯 Smart Scanning**: Pemindaian ARP agresif untuk menemukan semua perangkat aktif.
+- **📱 Vendor Identification**: Identifikasi merk perangkat (Vivo, Xiaomi, Apple, dll).
+- **🛠 Dual Mode**:
+    - **LAG Mode**: Menciptakan latensi tinggi (ping spike) pada target.
+    - **DC Mode**: Memutus koneksi internet target sepenuhnya.
+- **🛡 Safe Exit**: Fitur pemulihan tabel ARP otomatis saat program dihentikan (Ctrl+C).
+
+---
+
+## 🚀 Panduan Instalasi
+
+Pilih instruksi sesuai dengan terminal atau sistem operasi yang Anda gunakan:
+
+### 1. 🐉 Kali Linux / Parrot OS / Ubuntu / Debian
 ```bash
+# Update sistem
+sudo apt update && sudo apt install git python3 python3-pip -y
+
+# Clone repositori
 git clone [https://github.com/kOdopoiii/NetChoke.git](https://github.com/kOdopoiii/NetChoke.git)
 cd NetChoke
-chmod +x setup.sh
-./setup.sh
+
+# Instal dependensi
+pip3 install -r requirements.txt --break-system-packages
+
+# Jalankan
+sudo python3 main.py
