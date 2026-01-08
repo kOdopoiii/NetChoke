@@ -35,7 +35,7 @@ pip3 install -r requirements.txt --break-system-packages
 # Jalankan
 sudo python3 main.py
 
-
+---
 
 ### 2. 🦅 Arch Linux (BlackArch)
 Bash
@@ -46,7 +46,7 @@ cd NetChoke
 pip install -r requirements.txt
 sudo python main.py
 
-
+---
 
 ### 3. 📱 Termux (Android - Rooted)
 
